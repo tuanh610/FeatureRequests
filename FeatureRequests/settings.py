@@ -29,7 +29,7 @@ SECRET_KEY = '8skk6!fbf-q1i3_m*$$hxcu5c$1s$^%a6gk!45l9y&*^**&#z+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["feature-request-tuanh.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition

@@ -33,7 +33,9 @@
             {{ request_item.description }}
         </code>
 
-        <div class="row" style="margin-top: 50px">
+
+        {% if user.is_superuser %}
+            <div class="row" style="margin-top: 50px">
             <div class="col s2">
                 <form action="{% url 'RequestManager:edit_request'%}" method="post">
                     {% csrf_token %}
@@ -53,6 +55,8 @@
                 </form>
             </div>
         </div>
+        {% endif %}
+
     </div>
 </main>
 

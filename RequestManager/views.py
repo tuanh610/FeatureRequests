@@ -36,7 +36,11 @@ def delete_request(request):
         try:
             request_id = request.POST["id"]
             item = Request.objects.get(pk=request_id)
+            client = ClientDetail.objects.get(pk=item.client.id)
+            client.request_amount -= 1
+            client.save()
             item.delete()
+            
             return render(request, template_name='home.html', context={"status_message": "Delete request successfully"})
         except ObjectDoesNotExist:
             return render(request, template_name='home.html',

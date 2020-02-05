@@ -130,5 +130,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-prod_db = dj_database_url.config(conn_max_age=500)
+prod_db = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(prod_db)

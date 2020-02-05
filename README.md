@@ -30,4 +30,4 @@ Edit/Update only available if you have login with admin password
 
 Admin username: admin 
 
-Admin password: tuanh1993
+Admin password: test1993

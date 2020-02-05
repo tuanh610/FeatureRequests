@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+{%  include "base/headData.html" %}
+
+<body>
+{% include "base/NavBar.html" %}
+<main>
+    <h1 style="text-align: center">Submit result</h1>
+    <div class="divider"></div>
+    {% if error %}
+        <h5 style="text-align: left">Error submitting request. {{ error }}</h5>
+    {% else %}
+        <h5 style="text-align: left">Request submitted successfully on {{ time }}</h5>
+    {% endif %}
+    <div class="row">
+        <div class="col s2">
+            <form action="{% url 'RequestManager:home' %}">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Return home
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+        <div class="col s2">
+            <form action="{% url 'RequestManager:new_request' %}">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit Another
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+
+</main>
+
+{%  include 'base/footer.html' %}
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+{%  include "base/headData.html" %}
+
+<body>
+{% include "base/NavBar.html" with sources=AllSources%}
+
+<main>
+    {% include "base/paginator.html" with items=allData %}
+
+    <h3 class="center" style="padding: 1em 0 2em 0">All Requests Logged</h3>
+
+    <div class="row">
+        {% for item in allData %}
+            <div class="col s4 m3 l2 l2">
+                {% include "RequestManager/cardItems.html" with item=item%}
+            </div>
+        {% endfor %}
+    </div>
+
+    {% include "base/paginator.html" with items=allData %}
+</main>
+
+{% include "base/footer.html" %}
+</body>
+</html>

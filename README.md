@@ -25,6 +25,9 @@ Eg. (1,2,3,4) -> Insert with priority 2 -> (1, 2(New Item), 3(Old:2), 4(Old:3), 
 5. If an item is edited and the prioriy changes then it will go thorugh the 3rd point
 
 Edit/Update is done with post request so that you cannot refresh and redo it and also not able to just type it in the address bar.
+
 Edit/Update only available if you have login with admin password
+
 Admin username: admin 
+
 Admin password: tuanh1993

@@ -40,7 +40,7 @@ def delete_request(request):
             client.request_amount -= 1
             client.save()
             item.delete()
-            
+
             return render(request, template_name='home.html', context={"status_message": "Delete request successfully"})
         except ObjectDoesNotExist:
             return render(request, template_name='home.html',

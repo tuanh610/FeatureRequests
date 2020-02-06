@@ -19,7 +19,6 @@ class RequestForm(forms.ModelForm):
         self.helper = FormHelper
         self.helper.form_method = 'post'
         self.helper.form_action = reverse('RequestManager:request_result')
-
         self.helper.layout = Layout(
             Row(
                 Column('client', css_class='col s3'),

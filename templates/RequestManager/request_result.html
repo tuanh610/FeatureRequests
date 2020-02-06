@@ -2,28 +2,27 @@
 {% load static %}
 <html lang="en">
 {%  include "base/headData.html" %}
-
 <body>
 {% include "base/NavBar.html" %}
 <main>
-    <h1 style="text-align: center">Submit result</h1>
+    <h1 style="text-align: center">Operation Result</h1>
     <div class="divider"></div>
     {% if error %}
-        <h5 style="text-align: left">Error submitting request. {{ error }}</h5>
+        <h5  class="red-text darken-1" style="text-align: left">Error submitting request. {{ error }}</h5>
     {% else %}
-        <h5 style="text-align: left">Request submitted successfully on {{ time }}</h5>
+        <h5 class="green-text accent-3" style="text-align: left">Operation successful. {{ status }}</h5>
     {% endif %}
-    <div class="row">
+    <div class="row" style="margin-top: 100px">
         <div class="col s2">
             <form action="{% url 'RequestManager:home' %}">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Return home
+                <button class="btn waves-effect waves-light" type="submit" name="action">Return Home
                     <i class="material-icons right">send</i>
                 </button>
             </form>
         </div>
         <div class="col s2">
-            <form action="{% url 'RequestManager:new_request' %}">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Submit Another
+            <form action="{% url 'RequestManager:all_requests' 1%}">
+                <button class="btn waves-effect waves-light" type="submit" name="action">All Requests
                     <i class="material-icons right">send</i>
                 </button>
             </form>

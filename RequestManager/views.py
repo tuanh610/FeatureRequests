@@ -4,6 +4,7 @@ from .models import ClientDetail, Request
 from .forms import RequestForm
 from django.views import generic
 from django.core.exceptions import ObjectDoesNotExist
+from datetime import date
 # Create your views here.
 # urlpatterns = [
 #     path('', views.home, name='home'),
@@ -19,18 +20,32 @@ def home(request):
 
 def edit_request(request):
     if request.method == "POST":
-        try:
-            request_id = request.POST["id"]
-            item = Request.objects.get(pk=request_id)
-            request_form = RequestForm(instance=item)
-            return render(request, template_name='RequestManager/edit_request.html',
-                          context={"form": request_form, "request_id": request_id})
-        except ObjectDoesNotExist:
-            return render(request, template_name='home.html',
-                          context={"error_message": "Request ID incorrect. Cannot find request"})
+        if "id" in request.POST:
+            try:
+                request_id = request.POST["id"]
+                item = Request.objects.get(pk=request_id)
+                request_form = RequestForm(instance=item)
+                return render(request, template_name='RequestManager/edit_request.html',
+                              context={"form": request_form, "request_id": request_id})
+            except ObjectDoesNotExist:
+                return redirect('RequestManager:request_result_error',
+                                "Request ID incorrect. Cannot find request", permanent=True)
+        elif "request_id" in request.POST:
+            olditem = Request.objects.get(pk=request.POST["request_id"])
+            requestform = RequestForm(request.POST, instance=olditem)
+            if requestform.cleaned_data.get('target_date') < date.today():
+                return redirect('RequestManager:request_result_error',
+                                "Target Date cannot be earlier than current date", permanent=True)
+            if requestform.is_valid():
+                item = updateDB(requestform)
+            else:
+                return redirect('RequestManager:request_result_error',
+                                "Data Input Incorrect. Please re-check", permanent=True)
+
+            return redirect('RequestManager:request_result_ok', "Request edited at {}".format(str(item.submit_date)), permanent=True)
     else:
         return render(request, template_name='home.html',
-                      context={"error_message": "Invalid request"})
+                      context={"error_message": "Invalid operation"})
 
 
 def delete_request(request):
@@ -43,41 +58,47 @@ def delete_request(request):
             client.save()
             item.delete()
 
-            return render(request, template_name='home.html', context={"status_message": "Delete request successfully"})
+            return redirect('RequestManager:request_result_ok', "Request deleted", permanent=True)
         except ObjectDoesNotExist:
-            return render(request, template_name='home.html',
-                          context={"error_message": "Request ID incorrect. Cannot find request"})
+            return redirect('RequestManager:request_result_error',
+                            "Request ID incorrect. Cannot find request", permanent=True)
     else:
-        return render(request, template_name='home.html',
-                      context={"error_message": "Invalid request"})
+        return redirect('RequestManager:request_result_error',
+                        "Invalid operation", permanent=True)
+
 
 def new_request(request):
-    request_form = RequestForm()
-    return render(request, template_name='RequestManager/new_request.html', context={"form": request_form})
-
-
-def request_result(request):
-    try:
-        if request.method == "POST":
-            if "cancel" in request.POST:
-                return redirect('RequestManager:home')
-            if "request_id" in request.POST:
-                olditem = Request.objects.get(pk=request.POST["request_id"])
-                requestform = RequestForm(request.POST, instance=olditem)
-            else:
-                requestform = RequestForm(request.POST)
-
-            if requestform.is_valid():
-                item = updateDB(requestform)
-            else:
-                return render(request, 'RequestManager/request_result.html',
-                              {'error': "Data Input Incorrect. Please re-check"})
-
-            return render(request, 'RequestManager/request_result.html', {'time': item.submit_date})
+    if request.method == "POST":
+        if "cancel" in request.POST:
+            return redirect('RequestManager:home')
+        requestform = RequestForm(request.POST)
+        if requestform.cleaned_data.get("target_date") < date.today():
+            return redirect('RequestManager:request_result_error',
+                            "Target Date cannot be earlier than current date", permanent=True)
+        if requestform.is_valid():
+            item = updateDB(requestform)
         else:
-            return redirect('RequestManager:new_request')
-    except Exception as e:
-        return render(request, 'RequestManager/request_result.html', {'error': str(e)})
+            return redirect('RequestManager:request_result_error', "Data Input Incorrect. Please re-check", permanent=True)
+
+        return redirect('RequestManager:request_result_ok', "Request added at {}".format(str(item.submit_date)), permanent=True)
+    else:
+        request_form = RequestForm()
+        response = render(request, template_name='RequestManager/new_request.html', context={"form": request_form})
+        response['Cache-Control'] = 'no-cache'
+        return response
+
+
+def request_result(request, status=None, error=None):
+    if status is not None:
+        return render(request, template_name='RequestManager/request_result.html',
+                      context={"status": status})
+    elif error is not None:
+        return render(request, template_name='RequestManager/request_result.html',
+                      context={"error": error})
+    else:
+        return render(request, template_name='RequestManager/request_result.html',
+                      context={"error": "Unknown error"})
+
 
 def updateDB(requestform):
     item = requestform.save()
@@ -101,6 +122,7 @@ def updateDB(requestform):
             raise Exception("Request data has been tampered. Please use admin to correct it")
     return item
 
+
 def all_requests(request, page):
     all_requests = list(Request.objects.all())
     paginator = Paginator(all_requests, 12)
@@ -112,6 +134,7 @@ class RequestView(generic.DetailView):
     model = Request
     template_name = 'RequestManager/detail.html'
     context_object_name = 'request_item'
+
 
 def about(request):
     return render(request, 'about.html')

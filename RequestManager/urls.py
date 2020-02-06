@@ -5,7 +5,8 @@ app_name = 'RequestManager'
 urlpatterns = [
     path('', views.home, name='home'),
     path('new_request/', views.new_request, name='new_request'),
-    path('request_result/', views.request_result, name='request_result'),
+    path('request_result/?error=<str:error>', views.request_result, name='request_result_error'),
+    path('request_result/?status=<str:status>', views.request_result, name='request_result_ok'),
     path('all_requests/?page=<int:page>', views.all_requests, name='all_requests'),
     path('request/<int:pk>/', views.RequestView.as_view(), name='detail'),
     path('request/edit', views.edit_request, name='edit_request'),

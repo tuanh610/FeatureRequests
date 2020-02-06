@@ -33,10 +33,10 @@ def edit_request(request):
         elif "request_id" in request.POST:
             olditem = Request.objects.get(pk=request.POST["request_id"])
             requestform = RequestForm(request.POST, instance=olditem)
-            if requestform.cleaned_data.get('target_date') < date.today():
-                return redirect('RequestManager:request_result_error',
-                                "Target Date cannot be earlier than current date", permanent=True)
             if requestform.is_valid():
+                if requestform.cleaned_data.get('target_date') < date.today():
+                    return redirect('RequestManager:request_result_error',
+                                    "Target Date cannot be earlier than current date", permanent=True)
                 item = updateDB(requestform)
             else:
                 return redirect('RequestManager:request_result_error',
@@ -72,10 +72,10 @@ def new_request(request):
         if "cancel" in request.POST:
             return redirect('RequestManager:home')
         requestform = RequestForm(request.POST)
-        if requestform.cleaned_data.get("target_date") < date.today():
-            return redirect('RequestManager:request_result_error',
-                            "Target Date cannot be earlier than current date", permanent=True)
         if requestform.is_valid():
+            if requestform.cleaned_data.get("target_date") < date.today():
+                return redirect('RequestManager:request_result_error',
+                                "Target Date cannot be earlier than current date", permanent=True)
             item = updateDB(requestform)
         else:
             return redirect('RequestManager:request_result_error', "Data Input Incorrect. Please re-check", permanent=True)

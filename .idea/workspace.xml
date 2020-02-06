@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9bbae9ce-a073-4d87-9c18-f636bc64e1f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RequestManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/RequestManager/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/RequestManager/cardItems.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/RequestManager/cardItems.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/RequestManager/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/RequestManager/detail.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -133,9 +129,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="293" />
-    <option name="y" value="87" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="337" />
+    <option name="y" value="5" />
     <option name="width" value="1245" />
     <option name="height" value="980" />
   </component>
@@ -188,7 +184,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -212,7 +208,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580912731069</updated>
-      <workItem from="1580912732867" duration="5845000" />
+      <workItem from="1580912732867" duration="7300000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1580915037017</created>
@@ -235,23 +231,30 @@
       <option name="project" value="LOCAL" />
       <updated>1580917471405</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix admin stuff. Add scroll">
+      <created>1580918617038</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580918617038</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5845000" />
+    <option name="totallyTimeSpent" value="7300000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="235" y="70" width="996" height="784" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3976546" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info active="true" anchor="bottom" id="Version Control" visible="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Python Console" weight="0.32956153" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.44716692" />
+      <window_info anchor="bottom" id="Terminal" weight="0.41301274" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -273,7 +276,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Add requirements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add requirements" />
+    <MESSAGE value="fix admin stuff. Add scroll" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix admin stuff. Add scroll" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/venv/Scripts/pip-script.py">

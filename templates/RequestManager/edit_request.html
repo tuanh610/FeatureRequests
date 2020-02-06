@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+{%  include "base/headData.html" %}
+
+<body>
+{% include "base/NavBar.html" %}
+
+<main>
+    <h1 style="text-align: center">Submit New Request</h1>
+    <div style="padding: 20px">
+        <form action="{% url 'RequestManager:request_result' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="request_id" value={{ request_id }}>
+             {{ form|crispy }}
+            <button class="btn waves-effect waves-light" type="submit" name="action">Edit
+                            <i class="material-icons right">edit</i>
+            </button>
+        </form>
+    </div>
+    <div style="float: right;">
+        <a class="btn-floating btn-large waves-effect waves-light red" href={% url 'RequestManager:home' %}>
+            <i class="material-icons">close</i></a>
+    </div>
+
+</main>
+
+{% include "base/footer.html" %}
+<script>
+    $(document).ready(function(){
+        $('select').formSelect();
+        $('.datepicker').datepicker();
+    });
+</script>

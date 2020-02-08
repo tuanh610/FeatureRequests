@@ -3,14 +3,13 @@
 {% load crispy_forms_tags %}
 <html lang="en">
 {%  include "base/headData.html" %}
-
 <body>
 {% include "base/NavBar.html" %}
 
 <main>
     <h1 style="text-align: center">Submit New Request</h1>
     <div style="padding: 20px">
-        <form action="{% url 'RequestManager:request_result' %}" method="post">
+        <form action="{% url 'RequestManager:edit_request' %}" method="post">
             {% csrf_token %}
             <input type="hidden" name="request_id" value={{ request_id }}>
              {{ form|crispy }}

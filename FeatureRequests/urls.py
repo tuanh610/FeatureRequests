@@ -18,6 +18,9 @@ from django.urls import path, include
 from .settings import STATIC_ROOT, STATIC_URL
 from django.conf.urls.static import static
 
+# Add in:
+# 1. All the url path in the RequestManager urls.py
+# 2. static folder url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('RequestManager.urls'))

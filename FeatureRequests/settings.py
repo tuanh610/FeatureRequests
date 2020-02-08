@@ -13,12 +13,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import dj_database_url
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Tempalte folder to store all html file
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -29,11 +28,12 @@ SECRET_KEY = '8skk6!fbf-q1i3_m*$$hxcu5c$1s$^%a6gk!45l9y&*^**&#z+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Add heroku to be one of the host so that we can push it to heroku
 ALLOWED_HOSTS = ["feature-request-tuanh.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
-
+# Added: RequestManager (the app), crispy_form (for form visualization)
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'crispy_forms',
 ]
 
+# Added: whitenoise (for heroku deployment)
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -112,6 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
+# Change timezone to Singapore
 TIME_ZONE = 'Asia/Singapore'
 
 USE_I18N = True
@@ -127,6 +129,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

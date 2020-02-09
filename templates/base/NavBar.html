@@ -2,7 +2,6 @@
     <nav>
         <div class="container nav-wrapper">
             <a href="{% url 'RequestManager:home' %}" class="brand-logo">Request Manager</a>
-            <a href={% url 'RequestManager:about' %}>About</a>
             <ul id="nav-mobile" class="right">
                 <li><a href={% url 'RequestManager:new_request' %}>Submit Request</a></li>
                 <li><a href={% url 'RequestManager:all_requests' 1%}>View Request</a></li>
@@ -11,6 +10,7 @@
                 {% else %}
                     <li><a href={% url 'Login' %}>Login</a></li>
                 {% endif %}
+                <li><a href={% url 'RequestManager:about' %}>About</a></li>
             </ul>
         </div>
     </nav>

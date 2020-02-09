@@ -11,30 +11,6 @@ from django.db import models
 from django.core.validators import MinValueValidator
 from . import constants
 
-
-class adminUser(models.Model):
-    """
-    A class used to represent the admin user
-    This will be used as a authentication method later
-    ...
-
-    Attributes
-    ----------
-    admin_email : models.EmailField
-        the email of the admin, needs to be unique
-    admin_name : models.CharField
-        the name of the admin
-    admin_password: models.CharField
-        the password the admin
-    """
-    admin_email = models.EmailField(max_length=200, unique=True)
-    admin_name = models.CharField(max_length=200)
-    admin_password = models.CharField(max_length=200)
-
-    def __str__(self):
-        return '{}: {}'.format(self.admin_name, self.admin_email)
-
-
 class ClientDetail(models.Model):
     """
     A class used to represent the client

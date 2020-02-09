@@ -25,5 +25,7 @@ urlpatterns = [
     # Delete request page, only accessible via post request
     path('request/delete', views.delete_request, name='delete_request'),
     # Show trivia information about my self
-    path('about/', views.about, name='about')
+    path('about/', views.about, name='about'),
+    # Register url
+    path('register/', views.register, name='Register'),
 ]

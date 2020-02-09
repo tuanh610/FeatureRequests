@@ -4,8 +4,9 @@ The logic when render the view or when submit form is also handle here
 """
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
+from django.contrib import messages
 from .models import ClientDetail, Request
-from .forms import RequestForm
+from .forms import RequestForm, UserRegisterForm
 from django.views import generic
 from django.core.exceptions import ObjectDoesNotExist
 from datetime import date
@@ -249,3 +250,21 @@ def about(request):
     About page, just render 'about.html'
     """
     return render(request, 'about.html')
+
+
+def register(request):
+    """
+    This page allow user to register for an account for admin related thing
+    :param request: The request of page
+    :return:
+    Render register.html
+    """
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            return redirect('RequestManager:request_result_ok', f'Account created for {username}!', permanent=True)
+    else:
+        form = UserRegisterForm()
+    return render(request, 'RequestManager/register.html', {'form': form})

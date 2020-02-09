@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83198e2d-c1da-467a-88c0-d5703d3db280" name="Default Changelist" comment="Fix checking for target time &#10;Redo operation result page">
+    <list default="true" id="83198e2d-c1da-467a-88c0-d5703d3db280" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/RequestManager/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/RequestManager/logout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/RequestManager/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FeatureRequests/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FeatureRequests/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FeatureRequests/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FeatureRequests/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RequestManager/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/RequestManager/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RequestManager/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/RequestManager/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RequestManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/RequestManager/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/RequestManager/edit_request.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/RequestManager/edit_request.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/RequestManager/new_request.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/RequestManager/new_request.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/RequestManager/request_result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/RequestManager/request_result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/RequestManager/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/RequestManager/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/NavBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/NavBar.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,41 +30,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RequestManager/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="248" column="34" selection-start-line="248" selection-start-column="34" selection-end-line="248" selection-end-column="34" />
+            <state relative-caret-position="6012">
+              <caret line="269" column="26" selection-start-line="269" selection-start-column="26" selection-end-line="269" selection-end-column="26" />
               <folding>
-                <element signature="e#337#382#0" expanded="true" />
-                <element signature="e#573#2173#0" />
+                <element signature="e#143#188#0" expanded="true" />
+                <element signature="e#444#494#1" />
                 <element signature="e#568#1131#1" />
-                <element signature="e#2768#3383#1" />
-                <element signature="e#4071#4616#1" />
-                <element signature="e#5667#6142#1" />
-                <element signature="e#9038#9349#1" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="600">
-                <caret line="25" lean-forward="true" selection-start-line="15" selection-end-line="25" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/FeatureRequests/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+              <folding>
+                <element signature="e#316#325#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home.html">
+        <entry file="file://$PROJECT_DIR$/templates/RequestManager/logout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+            <state relative-caret-position="128">
+              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/messages/api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-288">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/RequestManager/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="36" column="14" lean-forward="true" selection-end-line="43" selection-end-column="7" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/RequestManager/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,27 +114,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RequestManager/tests.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RequestManager/models.py">
+        <entry file="file://$PROJECT_DIR$/RequestManager/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1176">
-              <caret line="58" column="7" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#365#1" />
-              </folding>
+            <state relative-caret-position="433">
+              <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RequestManager/urls.py">
+        <entry file="file://$PROJECT_DIR$/templates/base/NavBar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+            <state relative-caret-position="384">
+              <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/RequestManager/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="48" column="45" lean-forward="true" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -115,6 +154,7 @@
       <find>all_requests</find>
       <find>request_result</find>
       <find>RequestView</find>
+      <find>Login</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,18 +167,23 @@
         <option value="$PROJECT_DIR$/venv/Scripts/pip-script.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/FeatureRequests/settings.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/templates/RequestManager/cardItems.html" />
-        <option value="$PROJECT_DIR$/RequestManager/forms.py" />
         <option value="$PROJECT_DIR$/RequestManager/models.py" />
         <option value="$PROJECT_DIR$/templates/RequestManager/new_request.html" />
         <option value="$PROJECT_DIR$/templates/RequestManager/edit_request.html" />
-        <option value="$PROJECT_DIR$/templates/RequestManager/detail.html" />
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/RequestManager/request_result.html" />
+        <option value="$PROJECT_DIR$/templates/RequestManager/register.html" />
+        <option value="$PROJECT_DIR$/FeatureRequests/urls.py" />
         <option value="$PROJECT_DIR$/RequestManager/urls.py" />
+        <option value="$PROJECT_DIR$/templates/RequestManager/login.html" />
+        <option value="$PROJECT_DIR$/RequestManager/forms.py" />
         <option value="$PROJECT_DIR$/RequestManager/views.py" />
+        <option value="$PROJECT_DIR$/FeatureRequests/settings.py" />
+        <option value="$PROJECT_DIR$/templates/RequestManager/logout.html" />
+        <option value="$PROJECT_DIR$/templates/base/NavBar.html" />
+        <option value="$PROJECT_DIR$/templates/RequestManager/detail.html" />
       </list>
     </option>
   </component>
@@ -149,9 +194,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="520" />
-    <option name="y" value="253" />
-    <option name="width" value="1818" />
+    <option name="x" value="1271" />
+    <option name="y" value="180" />
+    <option name="width" value="1253" />
     <option name="height" value="1104" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -171,18 +216,23 @@
             <path>
               <item name="FeatureRequests" type="b2602c69:ProjectViewProjectNode" />
               <item name="FeatureRequests" type="462c0819:PsiDirectoryNode" />
-              <item name="RequestManager" type="462c0819:PsiDirectoryNode" />
+              <item name="FeatureRequests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FeatureRequests" type="b2602c69:ProjectViewProjectNode" />
               <item name="FeatureRequests" type="462c0819:PsiDirectoryNode" />
               <item name="RequestManager" type="462c0819:PsiDirectoryNode" />
-              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FeatureRequests" type="b2602c69:ProjectViewProjectNode" />
               <item name="FeatureRequests" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FeatureRequests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FeatureRequests" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FeatureRequests" type="b2602c69:ProjectViewProjectNode" />
@@ -278,7 +328,8 @@
       <workItem from="1580920200219" duration="4315000" />
       <workItem from="1580948117957" duration="2810000" />
       <workItem from="1580989991549" duration="6181000" />
-      <workItem from="1581160487658" duration="4992000" />
+      <workItem from="1581160487658" duration="5509000" />
+      <workItem from="1581237391285" duration="15434000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1580915037017</created>
@@ -308,30 +359,37 @@
       <option name="project" value="LOCAL" />
       <updated>1580948186090</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add more comments. Done all commenting on python file">
+      <created>1581168818080</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1581168818080</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25404000" />
+    <option name="totallyTimeSpent" value="41355000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="520" y="253" width="1818" height="1104" extended-state="0" />
+    <frame x="1271" y="180" width="1253" height="1104" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49247313" visible="true" weight="0.2940842" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49247313" visible="true" weight="0.15423302" />
       <window_info id="Structure" order="1" sideWeight="0.5075269" side_tool="true" weight="0.20375335" />
       <window_info id="Favorites" order="2" sideWeight="0.500446" side_tool="true" weight="0.24450366" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39886847" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3985582" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4996669" weight="0.32917038" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.34229138" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.34191555" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.32917038" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50033313" side_tool="true" weight="0.32917038" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -348,7 +406,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Add requirements" />
     <MESSAGE value="Fix edit issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix edit issue" />
+    <MESSAGE value="Add more comments. Done all commenting on python file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add more comments. Done all commenting on python file" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -393,16 +452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FeatureRequests/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
-          <folding>
-            <element signature="e#316#325#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -461,13 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/RequestManager/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="41" column="53" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/forms/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
@@ -489,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/RequestManager/new_request.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/RequestManager/edit_request.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -510,47 +545,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="600">
+            <caret line="25" selection-start-line="15" selection-end-line="25" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="33" lean-forward="true" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/RequestManager/new_request.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="70" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RequestManager/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="58" column="7" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+        <state relative-caret-position="875">
+          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
           <folding>
             <element signature="e#0#365#1" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RequestManager/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-613">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RequestManager/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RequestManager/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="600">
-            <caret line="25" lean-forward="true" selection-start-line="15" selection-end-line="25" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/FeatureRequests/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="31" column="109" selection-start-line="31" selection-start-column="109" selection-end-line="31" selection-end-column="109" />
+          <folding>
+            <element signature="e#639#671#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RequestManager/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+          <folding>
+            <element signature="e#400#431#0" expanded="true" />
+            <element signature="e#934#1394#1" />
+            <element signature="e#2612#2685#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/messages/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
@@ -563,17 +630,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RequestManager/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="248" column="34" selection-start-line="248" selection-start-column="34" selection-end-line="248" selection-end-column="34" />
+        <state relative-caret-position="6012">
+          <caret line="269" column="26" selection-start-line="269" selection-start-column="26" selection-end-line="269" selection-end-column="26" />
           <folding>
-            <element signature="e#337#382#0" expanded="true" />
-            <element signature="e#573#2173#0" />
+            <element signature="e#143#188#0" expanded="true" />
+            <element signature="e#444#494#1" />
             <element signature="e#568#1131#1" />
-            <element signature="e#2768#3383#1" />
-            <element signature="e#4071#4616#1" />
-            <element signature="e#5667#6142#1" />
-            <element signature="e#9038#9349#1" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/RequestManager/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureRequests/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+          <folding>
+            <element signature="e#316#325#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/RequestManager/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="36" column="14" lean-forward="true" selection-end-line="43" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/RequestManager/logout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RequestManager/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base/NavBar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/RequestManager/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="48" column="45" lean-forward="true" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
         </state>
       </provider>
     </entry>

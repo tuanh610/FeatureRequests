@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth import views as auth_view
 from .settings import STATIC_ROOT, STATIC_URL
 from django.conf.urls.static import static
 
@@ -23,5 +24,10 @@ from django.conf.urls.static import static
 # 2. static folder url
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('RequestManager.urls'))
+    # All RequestManager related urls
+    path('', include('RequestManager.urls')),
+    # Login url
+    path('login/', auth_view.LoginView.as_view(template_name='RequestManager/login.html'), name='Login'),
+    # Logout url
+    path('logout/', auth_view.LogoutView.as_view(template_name='RequestManager/logout.html'), name='Logout'),
 ] + static(STATIC_URL, document_root=STATIC_ROOT)

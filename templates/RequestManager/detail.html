@@ -34,7 +34,7 @@
         </code>
 
 
-        {% if user.is_superuser %}
+        {% if user.is_authenticated %}
             <div class="row" style="margin-top: 50px">
                 <div class="col s2">
                     <form action="{% url 'RequestManager:edit_request'%}" method="post">

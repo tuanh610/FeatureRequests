@@ -13,7 +13,8 @@ from django import forms
 from .models import Request, ClientDetail
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit, Row, Column, Button
-
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 class RequestForm(forms.ModelForm):
     """
@@ -74,3 +75,14 @@ class RequestForm(forms.ModelForm):
                 Submit('submit', "Submit", css_class="waves-effect waves-light")
             )
         )
+
+
+class UserRegisterForm(UserCreationForm):
+    """
+    A class used to represent the user register form
+    """
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
